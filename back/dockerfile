@@ -12,3 +12,5 @@ expose = 3001
 
 cmd = [node, --watch, app.js]
 
+# Build with: docker build -t <name of tag> .
+# the point do not forget the point it is an important point to remember
