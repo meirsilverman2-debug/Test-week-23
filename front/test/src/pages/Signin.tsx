@@ -7,6 +7,13 @@ export default function Signin() {
     <div>
         <UserList/>
         <UserFetch url="http://localhost:3001/user/users"/>
+        <form>
+            <input type="text" placeholder="Name"/>
+            <input type="email" placeholder="Email" />
+            <input type="Number" placeholder="Number"/>
+            <button type="submit" onClick={() => {}}>Register</button>
+
+        </form>
     </div>
   )
 }
