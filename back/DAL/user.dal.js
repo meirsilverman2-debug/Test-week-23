@@ -10,7 +10,11 @@ export async function registerUserDal({userName, email, password }){
     const newUser = {userName, email, password }
     const result = await users.insertOne(newUser);
     console.log(`A new user was successfuly register into the system with the _id: ${result.insertedId}`);
-    return result; 
+    result.userName = newUser.userName;
+    result.email = newUser.email;
+    delete result.acknowledged;
+    // `user name: ${result.userName} and _id: ${result.insertedId} and email: ${result.email}`
+    return result
 };
 
 

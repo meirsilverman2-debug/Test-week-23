@@ -4,8 +4,8 @@ import bcrypt from "bcrypt"
 const SALT_ROUNDS = 10;
 
 // Gets a password and create an hash from it and return in in promise form:
-export async function hashPassword(plainPassword, SALT_ROUNDS){
-    return bcrypt.hash(plainPassword, SALT_ROUNDS);
+export async function hashPassword(plainPassword, salt = SALT_ROUNDS){
+    return bcrypt.hash(plainPassword, salt);
 };
 
 
