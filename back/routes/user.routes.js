@@ -1,6 +1,6 @@
 import express from "express";
 import { timeLog, helloLog } from "../middlewhere/user.middlewhere.js";
-import {registerUserCtrl} from "../ctrl/user.ctrl.js";
+import {registerUserCtrl, gatAllUsersCtrl} from "../ctrl/user.ctrl.js";
 
 const router = express.Router();
 
@@ -23,9 +23,7 @@ router.post(
 
 router.get(
     "/users",
-    (req, res) => {
-        res.send("users")
-    }
+    gatAllUsersCtrl  
 );
 
 export default router;
